@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from "./components/searchBar/searchBar";
+import ResultsTable from './components/resultsTable/resultsTable';
+import Playlist from './components/playlist/playlist';
+import React, {useState} from 'react'
 
 function App() {
+  const [searchInput, setSearchInput] = useState("");
+  const [playlist, setPlaylist] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+      <ResultsTable searchInput={searchInput} playlist={playlist} setPlaylist={setPlaylist}/>
+      <Playlist playlist={playlist} setPlaylist={setPlaylist} />
     </div>
   );
 }
