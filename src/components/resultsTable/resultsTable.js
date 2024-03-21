@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 
 
-function ResultsTable({searchInput, playlist, setPlaylist}) {
-    const musicData = [
+function ResultsTable({searchResults, playlist, setPlaylist}) {
+    /*const musicData = [
         {title: "Now I Lay Thee Down",
         artist: "Machine Head",
+        album: "The Blackening",
         genre: "Metal"},
         {title: "Through Struggle",
         artist: "As I Lay Dying",
+        album: "Through Struggle",
         genre: "Metal"},
     ];
 
@@ -16,29 +18,30 @@ function ResultsTable({searchInput, playlist, setPlaylist}) {
             return (
                 music.title.toLowerCase().includes(searchInput.toLowerCase()) ||
                 music.artist.toLowerCase().includes(searchInput.toLowerCase()) ||
-                music.genre.toLowerCase().includes(searchInput.toLowerCase())
+                music.genre.toLowerCase().includes(searchInput.toLowerCase()) ||
+                music.album.toLowerCase().includes(searchInput.toLowerCase())
             );
         };
     });
-
+*/
     return (
         <div>
             <table>
             <thead>
                 <tr>
                     <th>Title</th>
+                    <th>Album</th>
                     <th>Artist</th>
-                    <th>Genre</th>
                 </tr>
             </thead>
             <tbody>
-                {searchResults.map((song, index) => {
+                {searchResults.map((track) => {
                     return (
-                        <tr key={index}>
-                            <td>{song.title}</td>
-                            <td>{song.artist}</td>
-                            <td>{song.genre}</td>
-                            <td><button onClick={() => setPlaylist([...playlist, song])}>+</button></td>
+                        <tr key={track.id}>
+                            <td>{track.name}</td>
+                            <td>{track.album}</td>
+                            <td>{track.artist}</td>
+                            <td><button onClick={() => setPlaylist([...playlist, track])}>+</button></td>
                         </tr>
                     )
                 })}
