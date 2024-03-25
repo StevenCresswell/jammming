@@ -26,9 +26,14 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} handleSearch={handleSearch}/>
-      <ResultsTable searchResults={searchResults} playlist={playlist} setPlaylist={setPlaylist} />
-      <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName} savePlaylist={savePlaylist}/>
+      <h1 class="title">Jammming</h1>
+      <div class="Inner-Workings-Container">
+        <div class="Inner-Workings">
+          <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} handleSearch={handleSearch}/>
+          <ResultsTable searchResults={searchResults} playlist={playlist} setPlaylist={setPlaylist} />
+          <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName} savePlaylist={savePlaylist}/>
+        </div>
+      </div>
     </div>
   );
 }
