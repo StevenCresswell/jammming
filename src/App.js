@@ -11,15 +11,24 @@ function App() {
   const [playlist, setPlaylist] = useState([]);
   const [playlistName, setPlaylistName] = useState("My Playlist");
 
-  const handleSearch = () => {
-    setSearchResults(Spotify.search(searchInput))
+  const handleSearch = async () => {
+    const results = await Spotify.search(searchInput)
+    setSearchResults(results)
   }
+
+  const savePlaylist = () => {
+  const trackUris = playlist.map((track) => track.uri);
+    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+      setPlaylistName("New Playlist");
+      setPlaylist([]);
+    });
+  };
 
   return (
     <div className="App">
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} handleSearch={handleSearch}/>
       <ResultsTable searchResults={searchResults} playlist={playlist} setPlaylist={setPlaylist} />
-      <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName}/>
+      <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName} savePlaylist={savePlaylist}/>
     </div>
   );
 }
