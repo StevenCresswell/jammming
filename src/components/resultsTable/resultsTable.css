@@ -1,0 +1,37 @@
+.resultsTable table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.resultsTable {
+    width: 40%;
+    color: blanchedalmond;
+}
+
+.resultsTable thead {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.resultsTable th {
+    border-bottom: 2px solid blanchedalmond;
+    width: 33%;
+}
+
+.resultsTable tbody {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.resultsTable td {
+    height: 2rem;
+}
+
+.end-row-button {
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}

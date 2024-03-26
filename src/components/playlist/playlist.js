@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './playlist.css'
 
 function Playlist( {playlist, setPlaylist, playlistName, setPlaylistName, savePlaylist} ) {
     const handleClear = () => {
@@ -11,7 +12,7 @@ function Playlist( {playlist, setPlaylist, playlistName, setPlaylistName, savePl
         setPlaylistName(e.target.value)
     }
     return (
-        <div>
+        <div class="playlist">
             <input
             type="text"
             placeholder="My Playlist"
@@ -32,18 +33,16 @@ function Playlist( {playlist, setPlaylist, playlistName, setPlaylistName, savePl
                                 <td>{song.name}</td>
                                 <td>{song.album}</td>
                                 <td>{song.artist}</td>
-                                <td><button onClick={() => handleRemoval(index)}>-</button></td>
+                                <td><button class="end-row-button" onClick={() => handleRemoval(index)}>-</button></td>
                             </tr>
                         )
                     })}
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td><button onClick={handleClear}>Clear Playlist</button></td>
-                        <td><button onClick={savePlaylist}>Save to Spotify</button></td>
-                    </tr>
-                </tfoot>
             </table>
+            <div class="buttonContainer">
+                <button onClick={handleClear}>Clear Playlist</button>
+                <button onClick={savePlaylist}>Save to Spotify</button>
+            </div>
     </div>
     )
 }

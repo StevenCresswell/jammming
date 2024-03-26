@@ -33,7 +33,7 @@ const Spotify = {
             return
         } else {
             const accessToken = Spotify.getAccessToken();
-            return fetch(`https://api.spotify.com/v1/search?type=track&limit=40&q=${searchInput}`, {
+            return fetch(`https://api.spotify.com/v1/search?type=track&limit=20&q=${searchInput}`, {
                 headers: {
                   Authorization: `Bearer ${accessToken}`
                 }

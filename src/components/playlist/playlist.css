@@ -1,0 +1,61 @@
+.playlist table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.playlist {
+    width: 40%;
+    color: blanchedalmond;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    bottom: 6.4rem;
+}
+
+.playlist thead {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.playlist th {
+    border-bottom: 2px solid blanchedalmond;
+    width: 33%;
+}
+
+.playlist tbody {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.playlist td {
+    height: 2rem;
+}
+
+.playlist input {
+    width: 25rem;
+    height: 5rem;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 20px;
+    border-color: blanchedalmond;
+    font-size: 1.5rem;
+    text-align: center;
+    color: blanchedalmond;
+    margin-bottom: 1rem;
+}
+
+.buttonContainer button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 20px;
+    background-color: blanchedalmond;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+}

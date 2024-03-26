@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './searchBar.css'
 
 function SearchBar({searchInput, setSearchInput, handleSearch}) {
 
@@ -8,12 +9,13 @@ function SearchBar({searchInput, setSearchInput, handleSearch}) {
     }
     
     return (
-        <div>
+        <div class="searchBar">
             <input
             type="search"
-            placeholder="Search by title, artist, album or genre"
+            placeholder="Search by title, artist or album"
             onChange={handleChange}
             value={searchInput} />
+            <br />
             <button onClick={handleSearch}>Search</button>
         </div>
     )

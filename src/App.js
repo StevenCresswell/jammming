@@ -23,15 +23,17 @@ function App() {
       setPlaylist([]);
     });
   };
-
+  Spotify.getAccessToken()
   return (
     <div className="App">
       <h1 class="title">Jammming</h1>
       <div class="Inner-Workings-Container">
         <div class="Inner-Workings">
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} handleSearch={handleSearch}/>
+          <div class="tableContainer">
           <ResultsTable searchResults={searchResults} playlist={playlist} setPlaylist={setPlaylist} />
           <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName} savePlaylist={savePlaylist}/>
+          </div>
         </div>
       </div>
     </div>

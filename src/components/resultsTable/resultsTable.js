@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './resultsTable.css'
 
 
 function ResultsTable({searchResults, playlist, setPlaylist}) {
@@ -25,7 +26,7 @@ function ResultsTable({searchResults, playlist, setPlaylist}) {
     });
 */
     return (
-        <div>
+        <div class="resultsTable">
             <table>
             <thead>
                 <tr>
@@ -35,13 +36,13 @@ function ResultsTable({searchResults, playlist, setPlaylist}) {
                 </tr>
             </thead>
             <tbody>
-                {searchResults.map((track) => {
+                {searchResults && searchResults.map((track) => {
                     return (
                         <tr key={track.id}>
                             <td>{track.name}</td>
                             <td>{track.album}</td>
                             <td>{track.artist}</td>
-                            <td><button onClick={() => setPlaylist([...playlist, track])}>+</button></td>
+                            <td><button class="end-row-button" onClick={() => setPlaylist([...playlist, track])}>+</button></td>
                         </tr>
                     )
                 })}
