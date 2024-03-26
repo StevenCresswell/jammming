@@ -1,3 +1,19 @@
+
+# Welcome to Jammming!
+
+A lightweight playlist creator using the [spotify](https://open.spotify.com/) web API.
+
+## Features:
+
+- Spotify API-powered search function. Search by track name, album name or artist.
+- Easy playlist creation. Add songs to your playlist with the click of a button.
+- Name your playlists. Pick the perfect name for your perfect songs and it will be saved to Spotify when you submit.
+- One-click playlist creation. After you have selected your desired songs, a single click will import it to your Spotify library.
+
+## How to use:
+
+This project is free for anyone to use and edit. Simply download the repository and open it using your preferred code editor. For further instructions on how to run the app, see the React Readme below.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
