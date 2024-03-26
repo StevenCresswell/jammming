@@ -1,5 +1,5 @@
 const client_id = 'fa2d5300f15e44ef90f1494e396990e1';
-const redirect_uri = 'http://localhost:3000/';
+const redirect_uri = 'https://wejammming.netlify.app/';
 const scope = 'playlist-modify-public';
 
 let url = 'https://accounts.spotify.com/authorize';
