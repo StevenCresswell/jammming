@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './playlist.css'
 
 function Playlist( {playlist, setPlaylist, playlistName, setPlaylistName, savePlaylist} ) {

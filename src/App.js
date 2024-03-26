@@ -3,7 +3,7 @@ import SearchBar from "./components/searchBar/searchBar";
 import ResultsTable from './components/resultsTable/resultsTable';
 import Playlist from './components/playlist/playlist';
 import Spotify from './components/Spotify/spotify';
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
